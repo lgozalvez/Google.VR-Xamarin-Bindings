@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "googlevr.bindings.droid", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "googlevr.bindings.ios", "googlevr.bindings.ios\googlevr.bindings.ios.csproj", "{FE1C819A-B5B7-4F4F-82B4-A5AE4A50E66C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.VR.GVRKit.iOS", "Google.VR.GVRKit.iOS\Google.VR.GVRKit.iOS.csproj", "{900F654C-96E2-4672-8D73-EB7BE7CDF298}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{FE1C819A-B5B7-4F4F-82B4-A5AE4A50E66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE1C819A-B5B7-4F4F-82B4-A5AE4A50E66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE1C819A-B5B7-4F4F-82B4-A5AE4A50E66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900F654C-96E2-4672-8D73-EB7BE7CDF298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900F654C-96E2-4672-8D73-EB7BE7CDF298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900F654C-96E2-4672-8D73-EB7BE7CDF298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900F654C-96E2-4672-8D73-EB7BE7CDF298}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

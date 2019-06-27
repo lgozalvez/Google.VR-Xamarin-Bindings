@@ -554,613 +554,613 @@ namespace GVRKit
 		HeadTrackingPaused = 5
 	}
 
-//	static class CFunctions
-//	{
-//		// extern gvr_audio_surround_context * gvr_audio_surround_create (gvr_audio_surround_format_type surround_format, int32_t num_input_channels, int32_t frames_per_processing, int sample_rate_hz);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_audio_surround_context* gvr_audio_surround_create (gvr_audio_surround_format_type surround_format, int num_input_channels, int frames_per_processing, int sample_rate_hz);
-//
-//		// extern void gvr_audio_surround_destroy (gvr_audio_surround_context **api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_surround_destroy (gvr_audio_surround_context** api);
-//
-//		// extern int64_t gvr_audio_surround_get_available_input_size_samples (const gvr_audio_surround_context *api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe long gvr_audio_surround_get_available_input_size_samples (gvr_audio_surround_context* api);
-//
-//		// extern int64_t gvr_audio_surround_add_interleaved_input (gvr_audio_surround_context *api, const int16_t *input_buffer_ptr, int64_t num_samples);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe long gvr_audio_surround_add_interleaved_input (gvr_audio_surround_context* api, short* input_buffer_ptr, long num_samples);
-//
-//		// extern int64_t gvr_audio_surround_get_available_output_size_samples (const gvr_audio_surround_context *api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe long gvr_audio_surround_get_available_output_size_samples (gvr_audio_surround_context* api);
-//
-//		// extern int64_t gvr_audio_surround_get_interleaved_output (gvr_audio_surround_context *api, int16_t *output_buffer_ptr, int64_t num_samples);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe long gvr_audio_surround_get_interleaved_output (gvr_audio_surround_context* api, short* output_buffer_ptr, long num_samples);
-//
-//		// extern void gvr_audio_surround_clear (gvr_audio_surround_context *api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_surround_clear (gvr_audio_surround_context* api);
-//
-//		// extern _Bool gvr_audio_surround_trigger_processing (gvr_audio_surround_context *api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe bool gvr_audio_surround_trigger_processing (gvr_audio_surround_context* api);
-//
-//		// extern void gvr_audio_surround_set_head_rotation (gvr_audio_surround_context *api, float w, float x, float y, float z);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_surround_set_head_rotation (gvr_audio_surround_context* api, float w, float x, float y, float z);
-//
-//		// extern gvr_audio_context * gvr_audio_create (int32_t rendering_mode);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_audio_context* gvr_audio_create (int rendering_mode);
-//
-//		// extern void gvr_audio_destroy (gvr_audio_context **api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_destroy (gvr_audio_context** api);
-//
-//		// extern void gvr_audio_resume (gvr_audio_context *api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_resume (gvr_audio_context* api);
-//
-//		// extern void gvr_audio_pause (gvr_audio_context *api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_pause (gvr_audio_context* api);
-//
-//		// extern void gvr_audio_update (gvr_audio_context *api);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_update (gvr_audio_context* api);
-//
-//		// extern _Bool gvr_audio_preload_soundfile (gvr_audio_context *api, const char *filename);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe bool gvr_audio_preload_soundfile (gvr_audio_context* api, sbyte* filename);
-//
-//		// extern void gvr_audio_unload_soundfile (gvr_audio_context *api, const char *filename);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_unload_soundfile (gvr_audio_context* api, sbyte* filename);
-//
-//		// extern gvr_audio_source_id gvr_audio_create_sound_object (gvr_audio_context *api, const char *filename);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_audio_create_sound_object (gvr_audio_context* api, sbyte* filename);
-//
-//		// extern gvr_audio_source_id gvr_audio_create_soundfield (gvr_audio_context *api, const char *filename);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_audio_create_soundfield (gvr_audio_context* api, sbyte* filename);
-//
-//		// extern gvr_audio_source_id gvr_audio_create_stereo_sound (gvr_audio_context *api, const char *filename);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_audio_create_stereo_sound (gvr_audio_context* api, sbyte* filename);
-//
-//		// extern void gvr_audio_play_sound (gvr_audio_context *api, gvr_audio_source_id source_id, _Bool looping_enabled);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_play_sound (gvr_audio_context* api, int source_id, bool looping_enabled);
-//
-//		// extern void gvr_audio_pause_sound (gvr_audio_context *api, gvr_audio_source_id source_id);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_pause_sound (gvr_audio_context* api, int source_id);
-//
-//		// extern void gvr_audio_resume_sound (gvr_audio_context *api, gvr_audio_source_id source_id);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_resume_sound (gvr_audio_context* api, int source_id);
-//
-//		// extern void gvr_audio_stop_sound (gvr_audio_context *api, gvr_audio_source_id source_id);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_stop_sound (gvr_audio_context* api, int source_id);
-//
-//		// extern _Bool gvr_audio_is_sound_playing (const gvr_audio_context *api, gvr_audio_source_id source_id);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe bool gvr_audio_is_sound_playing (gvr_audio_context* api, int source_id);
-//
-//		// extern _Bool gvr_audio_is_source_id_valid (const gvr_audio_context *api, gvr_audio_source_id source_id);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe bool gvr_audio_is_source_id_valid (gvr_audio_context* api, int source_id);
-//
-//		// extern void gvr_audio_set_sound_object_position (gvr_audio_context *api, gvr_audio_source_id sound_object_id, float x, float y, float z);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_sound_object_position (gvr_audio_context* api, int sound_object_id, float x, float y, float z);
-//
-//		// extern void gvr_audio_set_sound_object_directivity (gvr_audio_context *api, gvr_audio_source_id sound_object_id, float alpha, float order);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_sound_object_directivity (gvr_audio_context* api, int sound_object_id, float alpha, float order);
-//
-//		// extern void gvr_audio_set_sound_object_rotation (gvr_audio_context *api, gvr_audio_source_id sound_object_id, gvr_quatf sound_object_rotation);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_sound_object_rotation (gvr_audio_context* api, int sound_object_id, gvr_quatf sound_object_rotation);
-//
-//		// extern void gvr_audio_set_soundfield_rotation (gvr_audio_context *api, gvr_audio_source_id soundfield_id, gvr_quatf soundfield_rotation);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_soundfield_rotation (gvr_audio_context* api, int soundfield_id, gvr_quatf soundfield_rotation);
-//
-//		// extern void gvr_audio_set_sound_object_distance_rolloff_model (gvr_audio_context *api, gvr_audio_source_id sound_object_id, int32_t rolloff_model, float min_distance, float max_distance);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_sound_object_distance_rolloff_model (gvr_audio_context* api, int sound_object_id, int rolloff_model, float min_distance, float max_distance);
-//
-//		// extern void gvr_audio_set_master_volume (gvr_audio_context *api, float volume);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_master_volume (gvr_audio_context* api, float volume);
-//
-//		// extern void gvr_audio_set_sound_volume (gvr_audio_context *api, gvr_audio_source_id source_id, float volume);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_sound_volume (gvr_audio_context* api, int source_id, float volume);
-//
-//		// extern void gvr_audio_set_head_pose (gvr_audio_context *api, gvr_mat4f head_pose_matrix);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_head_pose (gvr_audio_context* api, gvr_mat4f head_pose_matrix);
-//
-//		// extern void gvr_audio_enable_room (gvr_audio_context *api, _Bool enable);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_enable_room (gvr_audio_context* api, bool enable);
-//
-//		// extern void gvr_audio_set_room_properties (gvr_audio_context *api, float size_x, float size_y, float size_z, int32_t wall_material, int32_t ceiling_material, int32_t floor_material);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_room_properties (gvr_audio_context* api, float size_x, float size_y, float size_z, int wall_material, int ceiling_material, int floor_material);
-//
-//		// extern void gvr_audio_set_room_reverb_adjustments (gvr_audio_context *api, float gain, float time_adjust, float brightness_adjust);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_set_room_reverb_adjustments (gvr_audio_context* api, float gain, float time_adjust, float brightness_adjust);
-//
-//		// extern void gvr_audio_enable_stereo_speaker_mode (gvr_audio_context *api, _Bool enable);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_audio_enable_stereo_speaker_mode (gvr_audio_context* api, bool enable);
-//
-//		// extern gvr_context * gvr_create ();
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_context* gvr_create ();
-//
-//		// extern gvr_version gvr_get_version ();
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern gvr_version gvr_get_version ();
-//
-//		// extern const char * gvr_get_version_string ();
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe sbyte* gvr_get_version_string ();
-//
-//		// extern int32_t gvr_get_error (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_get_error (gvr_context* gvr);
-//
-//		// extern int32_t gvr_clear_error (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_clear_error (gvr_context* gvr);
-//
-//		// extern const char * gvr_get_error_string (int32_t error_code);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe sbyte* gvr_get_error_string (int error_code);
-//
-//		// extern int32_t gvr_poll_event (gvr_context *gvr, gvr_event *event_out);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_poll_event (gvr_context* gvr, gvr_event* event_out);
-//
-//		// extern const gvr_properties * gvr_get_current_properties (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_properties* gvr_get_current_properties (gvr_context* gvr);
-//
-//		// extern int32_t gvr_properties_get (const gvr_properties *properties, int32_t property_key, gvr_value *value_out);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_properties_get (gvr_properties* properties, int property_key, gvr_value* value_out);
-//
-//		// extern const gvr_user_prefs * gvr_get_user_prefs (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_user_prefs* gvr_get_user_prefs (gvr_context* gvr);
-//
-//		// extern int32_t gvr_user_prefs_get_controller_handedness (const gvr_user_prefs *user_prefs);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_user_prefs_get_controller_handedness (gvr_user_prefs* user_prefs);
-//
-//		// extern void gvr_destroy (gvr_context **gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_destroy (gvr_context** gvr);
-//
-//		// extern void gvr_initialize_gl (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_initialize_gl (gvr_context* gvr);
-//
-//		// extern _Bool gvr_get_async_reprojection_enabled (const gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe bool gvr_get_async_reprojection_enabled (gvr_context* gvr);
-//
-//		// extern void gvr_get_recommended_buffer_viewports (const gvr_context *gvr, gvr_buffer_viewport_list *viewport_list);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_get_recommended_buffer_viewports (gvr_context* gvr, gvr_buffer_viewport_list* viewport_list);
-//
-//		// extern void gvr_get_screen_buffer_viewports (const gvr_context *gvr, gvr_buffer_viewport_list *viewport_list);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_get_screen_buffer_viewports (gvr_context* gvr, gvr_buffer_viewport_list* viewport_list);
-//
-//		// extern gvr_sizei gvr_get_maximum_effective_render_target_size (const gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_sizei gvr_get_maximum_effective_render_target_size (gvr_context* gvr);
-//
-//		// extern gvr_sizei gvr_get_screen_target_size (const gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_sizei gvr_get_screen_target_size (gvr_context* gvr);
-//
-//		// extern void gvr_set_surface_size (gvr_context *gvr, gvr_sizei surface_size_pixels);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_set_surface_size (gvr_context* gvr, gvr_sizei surface_size_pixels);
-//
-//		// extern void gvr_distort_to_screen (gvr_context *gvr, int32_t texture_id, const gvr_buffer_viewport_list *viewport_list, gvr_mat4f head_space_from_start_space, gvr_clock_time_point target_presentation_time);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_distort_to_screen (gvr_context* gvr, int texture_id, gvr_buffer_viewport_list* viewport_list, gvr_mat4f head_space_from_start_space, gvr_clock_time_point target_presentation_time);
-//
-//		// extern _Bool gvr_is_feature_supported (const gvr_context *gvr, int32_t feature);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe bool gvr_is_feature_supported (gvr_context* gvr, int feature);
-//
-//		// extern gvr_buffer_viewport * gvr_buffer_viewport_create (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_buffer_viewport* gvr_buffer_viewport_create (gvr_context* gvr);
-//
-//		// extern void gvr_buffer_viewport_destroy (gvr_buffer_viewport **viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_destroy (gvr_buffer_viewport** viewport);
-//
-//		// extern gvr_rectf gvr_buffer_viewport_get_source_uv (const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_rectf gvr_buffer_viewport_get_source_uv (gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_set_source_uv (gvr_buffer_viewport *viewport, gvr_rectf uv);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_source_uv (gvr_buffer_viewport* viewport, gvr_rectf uv);
-//
-//		// extern gvr_rectf gvr_buffer_viewport_get_source_fov (const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_rectf gvr_buffer_viewport_get_source_fov (gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_set_source_fov (gvr_buffer_viewport *viewport, gvr_rectf fov);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_source_fov (gvr_buffer_viewport* viewport, gvr_rectf fov);
-//
-//		// extern gvr_mat4f gvr_buffer_viewport_get_transform (const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_mat4f gvr_buffer_viewport_get_transform (gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_set_transform (gvr_buffer_viewport *viewport, gvr_mat4f transform);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_transform (gvr_buffer_viewport* viewport, gvr_mat4f transform);
-//
-//		// extern int32_t gvr_buffer_viewport_get_target_eye (const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_buffer_viewport_get_target_eye (gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_set_target_eye (gvr_buffer_viewport *viewport, int32_t index);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_target_eye (gvr_buffer_viewport* viewport, int index);
-//
-//		// extern int32_t gvr_buffer_viewport_get_source_buffer_index (const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_buffer_viewport_get_source_buffer_index (gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_set_source_buffer_index (gvr_buffer_viewport *viewport, int32_t buffer_index);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_source_buffer_index (gvr_buffer_viewport* viewport, int buffer_index);
-//
-//		// extern int32_t gvr_buffer_viewport_get_external_surface_id (const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_buffer_viewport_get_external_surface_id (gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_set_external_surface_id (gvr_buffer_viewport *viewport, int32_t external_surface_id);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_external_surface_id (gvr_buffer_viewport* viewport, int external_surface_id);
-//
-//		// extern int32_t gvr_buffer_viewport_get_reprojection (const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_buffer_viewport_get_reprojection (gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_set_reprojection (gvr_buffer_viewport *viewport, int32_t reprojection);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_reprojection (gvr_buffer_viewport* viewport, int reprojection);
-//
-//		// extern void gvr_buffer_viewport_set_source_layer (gvr_buffer_viewport *viewport, int32_t layer_index);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_source_layer (gvr_buffer_viewport* viewport, int layer_index);
-//
-//		// extern float gvr_buffer_viewport_get_opacity (const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe float gvr_buffer_viewport_get_opacity (gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_set_opacity (gvr_buffer_viewport *viewport, float opacity);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_set_opacity (gvr_buffer_viewport* viewport, float opacity);
-//
-//		// extern _Bool gvr_buffer_viewport_equal (const gvr_buffer_viewport *a, const gvr_buffer_viewport *b);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe bool gvr_buffer_viewport_equal (gvr_buffer_viewport* a, gvr_buffer_viewport* b);
-//
-//		// extern gvr_buffer_viewport_list * gvr_buffer_viewport_list_create (const gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_buffer_viewport_list* gvr_buffer_viewport_list_create (gvr_context* gvr);
-//
-//		// extern void gvr_buffer_viewport_list_destroy (gvr_buffer_viewport_list **viewport_list);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_list_destroy (gvr_buffer_viewport_list** viewport_list);
-//
-//		// extern size_t gvr_buffer_viewport_list_get_size (const gvr_buffer_viewport_list *viewport_list);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe nuint gvr_buffer_viewport_list_get_size (gvr_buffer_viewport_list* viewport_list);
-//
-//		// extern void gvr_buffer_viewport_list_get_item (const gvr_buffer_viewport_list *viewport_list, size_t index, gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_list_get_item (gvr_buffer_viewport_list* viewport_list, nuint index, gvr_buffer_viewport* viewport);
-//
-//		// extern void gvr_buffer_viewport_list_set_item (gvr_buffer_viewport_list *viewport_list, size_t index, const gvr_buffer_viewport *viewport);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_viewport_list_set_item (gvr_buffer_viewport_list* viewport_list, nuint index, gvr_buffer_viewport* viewport);
-//
-//		// extern gvr_buffer_spec * gvr_buffer_spec_create (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_buffer_spec* gvr_buffer_spec_create (gvr_context* gvr);
-//
-//		// extern void gvr_buffer_spec_destroy (gvr_buffer_spec **spec);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_spec_destroy (gvr_buffer_spec** spec);
-//
-//		// extern gvr_sizei gvr_buffer_spec_get_size (const gvr_buffer_spec *spec);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_sizei gvr_buffer_spec_get_size (gvr_buffer_spec* spec);
-//
-//		// extern void gvr_buffer_spec_set_size (gvr_buffer_spec *spec, gvr_sizei size);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_spec_set_size (gvr_buffer_spec* spec, gvr_sizei size);
-//
-//		// extern int32_t gvr_buffer_spec_get_samples (const gvr_buffer_spec *spec);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_buffer_spec_get_samples (gvr_buffer_spec* spec);
-//
-//		// extern void gvr_buffer_spec_set_samples (gvr_buffer_spec *spec, int32_t num_samples);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_spec_set_samples (gvr_buffer_spec* spec, int num_samples);
-//
-//		// extern void gvr_buffer_spec_set_color_format (gvr_buffer_spec *spec, int32_t color_format);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_spec_set_color_format (gvr_buffer_spec* spec, int color_format);
-//
-//		// extern void gvr_buffer_spec_set_depth_stencil_format (gvr_buffer_spec *spec, int32_t depth_stencil_format);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_spec_set_depth_stencil_format (gvr_buffer_spec* spec, int depth_stencil_format);
-//
-//		// extern void gvr_buffer_spec_set_multiview_layers (gvr_buffer_spec *spec, int32_t num_layers);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_buffer_spec_set_multiview_layers (gvr_buffer_spec* spec, int num_layers);
-//
-//		// extern gvr_swap_chain * gvr_swap_chain_create (gvr_context *gvr, const gvr_buffer_spec **buffers, int32_t count);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_swap_chain* gvr_swap_chain_create (gvr_context* gvr, gvr_buffer_spec** buffers, int count);
-//
-//		// extern void gvr_swap_chain_destroy (gvr_swap_chain **swap_chain);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_swap_chain_destroy (gvr_swap_chain** swap_chain);
-//
-//		// extern int32_t gvr_swap_chain_get_buffer_count (const gvr_swap_chain *swap_chain);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_swap_chain_get_buffer_count (gvr_swap_chain* swap_chain);
-//
-//		// extern gvr_sizei gvr_swap_chain_get_buffer_size (const gvr_swap_chain *swap_chain, int32_t index);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_sizei gvr_swap_chain_get_buffer_size (gvr_swap_chain* swap_chain, int index);
-//
-//		// extern void gvr_swap_chain_resize_buffer (gvr_swap_chain *swap_chain, int32_t index, gvr_sizei size);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_swap_chain_resize_buffer (gvr_swap_chain* swap_chain, int index, gvr_sizei size);
-//
-//		// extern gvr_frame * gvr_swap_chain_acquire_frame (gvr_swap_chain *swap_chain);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_frame* gvr_swap_chain_acquire_frame (gvr_swap_chain* swap_chain);
-//
-//		// extern void gvr_frame_bind_buffer (gvr_frame *frame, int32_t index);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_frame_bind_buffer (gvr_frame* frame, int index);
-//
-//		// extern void gvr_frame_unbind (gvr_frame *frame);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_frame_unbind (gvr_frame* frame);
-//
-//		// extern gvr_sizei gvr_frame_get_buffer_size (const gvr_frame *frame, int32_t index);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_sizei gvr_frame_get_buffer_size (gvr_frame* frame, int index);
-//
-//		// extern int32_t gvr_frame_get_framebuffer_object (const gvr_frame *frame, int32_t index);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_frame_get_framebuffer_object (gvr_frame* frame, int index);
-//
-//		// extern AHardwareBuffer * gvr_frame_get_hardware_buffer (const gvr_frame *frame, int32_t index);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe AHardwareBuffer* gvr_frame_get_hardware_buffer (gvr_frame* frame, int index);
-//
-//		// extern void gvr_frame_submit (gvr_frame **frame, const gvr_buffer_viewport_list *list, gvr_mat4f head_space_from_start_space);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_frame_submit (gvr_frame** frame, gvr_buffer_viewport_list* list, gvr_mat4f head_space_from_start_space);
-//
-//		// extern void gvr_bind_default_framebuffer (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_bind_default_framebuffer (gvr_context* gvr);
-//
-//		// extern gvr_clock_time_point gvr_get_time_point_now ();
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern gvr_clock_time_point gvr_get_time_point_now ();
-//
-//		// extern gvr_mat4f gvr_get_head_space_from_start_space_rotation (const gvr_context *gvr, const gvr_clock_time_point time);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_mat4f gvr_get_head_space_from_start_space_rotation (gvr_context* gvr, gvr_clock_time_point time);
-//
-//		// extern gvr_mat4f gvr_get_head_space_from_start_space_transform (const gvr_context *gvr, const gvr_clock_time_point time);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_mat4f gvr_get_head_space_from_start_space_transform (gvr_context* gvr, gvr_clock_time_point time);
-//
-//		// extern gvr_mat4f gvr_apply_neck_model (const gvr_context *gvr, gvr_mat4f head_space_from_start_space_rotation, float factor);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_mat4f gvr_apply_neck_model (gvr_context* gvr, gvr_mat4f head_space_from_start_space_rotation, float factor);
-//
-//		// extern void gvr_pause_tracking (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_pause_tracking (gvr_context* gvr);
-//
-//		// extern void gvr_resume_tracking (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_resume_tracking (gvr_context* gvr);
-//
-//		// extern void gvr_reset_tracking (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_reset_tracking (gvr_context* gvr);
-//
-//		// extern void gvr_recenter_tracking (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_recenter_tracking (gvr_context* gvr);
-//
-//		// extern _Bool gvr_set_default_viewer_profile (gvr_context *gvr, const char *viewer_profile_uri);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe bool gvr_set_default_viewer_profile (gvr_context* gvr, sbyte* viewer_profile_uri);
-//
-//		// extern void gvr_refresh_viewer_profile (gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_refresh_viewer_profile (gvr_context* gvr);
-//
-//		// extern const char * gvr_get_viewer_vendor (const gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe sbyte* gvr_get_viewer_vendor (gvr_context* gvr);
-//
-//		// extern const char * gvr_get_viewer_model (const gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe sbyte* gvr_get_viewer_model (gvr_context* gvr);
-//
-//		// extern int32_t gvr_get_viewer_type (const gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe int gvr_get_viewer_type (gvr_context* gvr);
-//
-//		// extern gvr_mat4f gvr_get_eye_from_head_matrix (const gvr_context *gvr, const int32_t eye);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_mat4f gvr_get_eye_from_head_matrix (gvr_context* gvr, int eye);
-//
-//		// extern gvr_recti gvr_get_window_bounds (const gvr_context *gvr);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe gvr_recti gvr_get_window_bounds (gvr_context* gvr);
-//
-//		// extern void gvr_compute_distorted_point (const gvr_context *gvr, const int32_t eye, const gvr_vec2f uv_in, gvr_vec2f *uv_out);
-//		[DllImport ("__Internal")]
-//		//[Verify (PlatformInvoke)]
-//		static extern unsafe void gvr_compute_distorted_point (gvr_context* gvr, int eye, gvr_vec2f uv_in, gvr_vec2f[] uv_out);
-//	}
+	static class CFunctions
+	{
+		// extern gvr_audio_surround_context * gvr_audio_surround_create (gvr_audio_surround_format_type surround_format, int32_t num_input_channels, int32_t frames_per_processing, int sample_rate_hz);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_audio_surround_context* gvr_audio_surround_create (gvr_audio_surround_format_type surround_format, int num_input_channels, int frames_per_processing, int sample_rate_hz);
+
+		// extern void gvr_audio_surround_destroy (gvr_audio_surround_context **api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_surround_destroy (gvr_audio_surround_context** api);
+
+		// extern int64_t gvr_audio_surround_get_available_input_size_samples (const gvr_audio_surround_context *api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe long gvr_audio_surround_get_available_input_size_samples (gvr_audio_surround_context* api);
+
+		// extern int64_t gvr_audio_surround_add_interleaved_input (gvr_audio_surround_context *api, const int16_t *input_buffer_ptr, int64_t num_samples);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe long gvr_audio_surround_add_interleaved_input (gvr_audio_surround_context* api, short* input_buffer_ptr, long num_samples);
+
+		// extern int64_t gvr_audio_surround_get_available_output_size_samples (const gvr_audio_surround_context *api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe long gvr_audio_surround_get_available_output_size_samples (gvr_audio_surround_context* api);
+
+		// extern int64_t gvr_audio_surround_get_interleaved_output (gvr_audio_surround_context *api, int16_t *output_buffer_ptr, int64_t num_samples);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe long gvr_audio_surround_get_interleaved_output (gvr_audio_surround_context* api, short* output_buffer_ptr, long num_samples);
+
+		// extern void gvr_audio_surround_clear (gvr_audio_surround_context *api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_surround_clear (gvr_audio_surround_context* api);
+
+		// extern _Bool gvr_audio_surround_trigger_processing (gvr_audio_surround_context *api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe bool gvr_audio_surround_trigger_processing (gvr_audio_surround_context* api);
+
+		// extern void gvr_audio_surround_set_head_rotation (gvr_audio_surround_context *api, float w, float x, float y, float z);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_surround_set_head_rotation (gvr_audio_surround_context* api, float w, float x, float y, float z);
+
+		// extern gvr_audio_context * gvr_audio_create (int32_t rendering_mode);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_audio_context* gvr_audio_create (int rendering_mode);
+
+		// extern void gvr_audio_destroy (gvr_audio_context **api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_destroy (gvr_audio_context** api);
+
+		// extern void gvr_audio_resume (gvr_audio_context *api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_resume (gvr_audio_context* api);
+
+		// extern void gvr_audio_pause (gvr_audio_context *api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_pause (gvr_audio_context* api);
+
+		// extern void gvr_audio_update (gvr_audio_context *api);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_update (gvr_audio_context* api);
+
+		// extern _Bool gvr_audio_preload_soundfile (gvr_audio_context *api, const char *filename);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe bool gvr_audio_preload_soundfile (gvr_audio_context* api, sbyte* filename);
+
+		// extern void gvr_audio_unload_soundfile (gvr_audio_context *api, const char *filename);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_unload_soundfile (gvr_audio_context* api, sbyte* filename);
+
+		// extern gvr_audio_source_id gvr_audio_create_sound_object (gvr_audio_context *api, const char *filename);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_audio_create_sound_object (gvr_audio_context* api, sbyte* filename);
+
+		// extern gvr_audio_source_id gvr_audio_create_soundfield (gvr_audio_context *api, const char *filename);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_audio_create_soundfield (gvr_audio_context* api, sbyte* filename);
+
+		// extern gvr_audio_source_id gvr_audio_create_stereo_sound (gvr_audio_context *api, const char *filename);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_audio_create_stereo_sound (gvr_audio_context* api, sbyte* filename);
+
+		// extern void gvr_audio_play_sound (gvr_audio_context *api, gvr_audio_source_id source_id, _Bool looping_enabled);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_play_sound (gvr_audio_context* api, int source_id, bool looping_enabled);
+
+		// extern void gvr_audio_pause_sound (gvr_audio_context *api, gvr_audio_source_id source_id);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_pause_sound (gvr_audio_context* api, int source_id);
+
+		// extern void gvr_audio_resume_sound (gvr_audio_context *api, gvr_audio_source_id source_id);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_resume_sound (gvr_audio_context* api, int source_id);
+
+		// extern void gvr_audio_stop_sound (gvr_audio_context *api, gvr_audio_source_id source_id);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_stop_sound (gvr_audio_context* api, int source_id);
+
+		// extern _Bool gvr_audio_is_sound_playing (const gvr_audio_context *api, gvr_audio_source_id source_id);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe bool gvr_audio_is_sound_playing (gvr_audio_context* api, int source_id);
+
+		// extern _Bool gvr_audio_is_source_id_valid (const gvr_audio_context *api, gvr_audio_source_id source_id);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe bool gvr_audio_is_source_id_valid (gvr_audio_context* api, int source_id);
+
+		// extern void gvr_audio_set_sound_object_position (gvr_audio_context *api, gvr_audio_source_id sound_object_id, float x, float y, float z);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_sound_object_position (gvr_audio_context* api, int sound_object_id, float x, float y, float z);
+
+		// extern void gvr_audio_set_sound_object_directivity (gvr_audio_context *api, gvr_audio_source_id sound_object_id, float alpha, float order);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_sound_object_directivity (gvr_audio_context* api, int sound_object_id, float alpha, float order);
+
+		// extern void gvr_audio_set_sound_object_rotation (gvr_audio_context *api, gvr_audio_source_id sound_object_id, gvr_quatf sound_object_rotation);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_sound_object_rotation (gvr_audio_context* api, int sound_object_id, gvr_quatf sound_object_rotation);
+
+		// extern void gvr_audio_set_soundfield_rotation (gvr_audio_context *api, gvr_audio_source_id soundfield_id, gvr_quatf soundfield_rotation);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_soundfield_rotation (gvr_audio_context* api, int soundfield_id, gvr_quatf soundfield_rotation);
+
+		// extern void gvr_audio_set_sound_object_distance_rolloff_model (gvr_audio_context *api, gvr_audio_source_id sound_object_id, int32_t rolloff_model, float min_distance, float max_distance);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_sound_object_distance_rolloff_model (gvr_audio_context* api, int sound_object_id, int rolloff_model, float min_distance, float max_distance);
+
+		// extern void gvr_audio_set_master_volume (gvr_audio_context *api, float volume);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_master_volume (gvr_audio_context* api, float volume);
+
+		// extern void gvr_audio_set_sound_volume (gvr_audio_context *api, gvr_audio_source_id source_id, float volume);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_sound_volume (gvr_audio_context* api, int source_id, float volume);
+
+		// extern void gvr_audio_set_head_pose (gvr_audio_context *api, gvr_mat4f head_pose_matrix);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_head_pose (gvr_audio_context* api, gvr_mat4f head_pose_matrix);
+
+		// extern void gvr_audio_enable_room (gvr_audio_context *api, _Bool enable);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_enable_room (gvr_audio_context* api, bool enable);
+
+		// extern void gvr_audio_set_room_properties (gvr_audio_context *api, float size_x, float size_y, float size_z, int32_t wall_material, int32_t ceiling_material, int32_t floor_material);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_room_properties (gvr_audio_context* api, float size_x, float size_y, float size_z, int wall_material, int ceiling_material, int floor_material);
+
+		// extern void gvr_audio_set_room_reverb_adjustments (gvr_audio_context *api, float gain, float time_adjust, float brightness_adjust);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_set_room_reverb_adjustments (gvr_audio_context* api, float gain, float time_adjust, float brightness_adjust);
+
+		// extern void gvr_audio_enable_stereo_speaker_mode (gvr_audio_context *api, _Bool enable);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_audio_enable_stereo_speaker_mode (gvr_audio_context* api, bool enable);
+
+		// extern gvr_context * gvr_create ();
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_context* gvr_create ();
+
+		// extern gvr_version gvr_get_version ();
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern gvr_version gvr_get_version ();
+
+		// extern const char * gvr_get_version_string ();
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe sbyte* gvr_get_version_string ();
+
+		// extern int32_t gvr_get_error (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_get_error (gvr_context* gvr);
+
+		// extern int32_t gvr_clear_error (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_clear_error (gvr_context* gvr);
+
+		// extern const char * gvr_get_error_string (int32_t error_code);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe sbyte* gvr_get_error_string (int error_code);
+
+		// extern int32_t gvr_poll_event (gvr_context *gvr, gvr_event *event_out);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_poll_event (gvr_context* gvr, gvr_event* event_out);
+
+		// extern const gvr_properties * gvr_get_current_properties (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_properties* gvr_get_current_properties (gvr_context* gvr);
+
+		// extern int32_t gvr_properties_get (const gvr_properties *properties, int32_t property_key, gvr_value *value_out);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_properties_get (gvr_properties* properties, int property_key, gvr_value* value_out);
+
+		// extern const gvr_user_prefs * gvr_get_user_prefs (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_user_prefs* gvr_get_user_prefs (gvr_context* gvr);
+
+		// extern int32_t gvr_user_prefs_get_controller_handedness (const gvr_user_prefs *user_prefs);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_user_prefs_get_controller_handedness (gvr_user_prefs* user_prefs);
+
+		// extern void gvr_destroy (gvr_context **gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_destroy (gvr_context** gvr);
+
+		// extern void gvr_initialize_gl (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_initialize_gl (gvr_context* gvr);
+
+		// extern _Bool gvr_get_async_reprojection_enabled (const gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe bool gvr_get_async_reprojection_enabled (gvr_context* gvr);
+
+		// extern void gvr_get_recommended_buffer_viewports (const gvr_context *gvr, gvr_buffer_viewport_list *viewport_list);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_get_recommended_buffer_viewports (gvr_context* gvr, gvr_buffer_viewport_list* viewport_list);
+
+		// extern void gvr_get_screen_buffer_viewports (const gvr_context *gvr, gvr_buffer_viewport_list *viewport_list);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_get_screen_buffer_viewports (gvr_context* gvr, gvr_buffer_viewport_list* viewport_list);
+
+		// extern gvr_sizei gvr_get_maximum_effective_render_target_size (const gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_sizei gvr_get_maximum_effective_render_target_size (gvr_context* gvr);
+
+		// extern gvr_sizei gvr_get_screen_target_size (const gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_sizei gvr_get_screen_target_size (gvr_context* gvr);
+
+		// extern void gvr_set_surface_size (gvr_context *gvr, gvr_sizei surface_size_pixels);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_set_surface_size (gvr_context* gvr, gvr_sizei surface_size_pixels);
+
+		// extern void gvr_distort_to_screen (gvr_context *gvr, int32_t texture_id, const gvr_buffer_viewport_list *viewport_list, gvr_mat4f head_space_from_start_space, gvr_clock_time_point target_presentation_time);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_distort_to_screen (gvr_context* gvr, int texture_id, gvr_buffer_viewport_list* viewport_list, gvr_mat4f head_space_from_start_space, gvr_clock_time_point target_presentation_time);
+
+		// extern _Bool gvr_is_feature_supported (const gvr_context *gvr, int32_t feature);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe bool gvr_is_feature_supported (gvr_context* gvr, int feature);
+
+		// extern gvr_buffer_viewport * gvr_buffer_viewport_create (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_buffer_viewport* gvr_buffer_viewport_create (gvr_context* gvr);
+
+		// extern void gvr_buffer_viewport_destroy (gvr_buffer_viewport **viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_destroy (gvr_buffer_viewport** viewport);
+
+		// extern gvr_rectf gvr_buffer_viewport_get_source_uv (const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_rectf gvr_buffer_viewport_get_source_uv (gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_set_source_uv (gvr_buffer_viewport *viewport, gvr_rectf uv);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_source_uv (gvr_buffer_viewport* viewport, gvr_rectf uv);
+
+		// extern gvr_rectf gvr_buffer_viewport_get_source_fov (const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_rectf gvr_buffer_viewport_get_source_fov (gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_set_source_fov (gvr_buffer_viewport *viewport, gvr_rectf fov);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_source_fov (gvr_buffer_viewport* viewport, gvr_rectf fov);
+
+		// extern gvr_mat4f gvr_buffer_viewport_get_transform (const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_mat4f gvr_buffer_viewport_get_transform (gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_set_transform (gvr_buffer_viewport *viewport, gvr_mat4f transform);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_transform (gvr_buffer_viewport* viewport, gvr_mat4f transform);
+
+		// extern int32_t gvr_buffer_viewport_get_target_eye (const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_buffer_viewport_get_target_eye (gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_set_target_eye (gvr_buffer_viewport *viewport, int32_t index);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_target_eye (gvr_buffer_viewport* viewport, int index);
+
+		// extern int32_t gvr_buffer_viewport_get_source_buffer_index (const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_buffer_viewport_get_source_buffer_index (gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_set_source_buffer_index (gvr_buffer_viewport *viewport, int32_t buffer_index);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_source_buffer_index (gvr_buffer_viewport* viewport, int buffer_index);
+
+		// extern int32_t gvr_buffer_viewport_get_external_surface_id (const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_buffer_viewport_get_external_surface_id (gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_set_external_surface_id (gvr_buffer_viewport *viewport, int32_t external_surface_id);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_external_surface_id (gvr_buffer_viewport* viewport, int external_surface_id);
+
+		// extern int32_t gvr_buffer_viewport_get_reprojection (const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_buffer_viewport_get_reprojection (gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_set_reprojection (gvr_buffer_viewport *viewport, int32_t reprojection);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_reprojection (gvr_buffer_viewport* viewport, int reprojection);
+
+		// extern void gvr_buffer_viewport_set_source_layer (gvr_buffer_viewport *viewport, int32_t layer_index);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_source_layer (gvr_buffer_viewport* viewport, int layer_index);
+
+		// extern float gvr_buffer_viewport_get_opacity (const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe float gvr_buffer_viewport_get_opacity (gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_set_opacity (gvr_buffer_viewport *viewport, float opacity);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_set_opacity (gvr_buffer_viewport* viewport, float opacity);
+
+		// extern _Bool gvr_buffer_viewport_equal (const gvr_buffer_viewport *a, const gvr_buffer_viewport *b);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe bool gvr_buffer_viewport_equal (gvr_buffer_viewport* a, gvr_buffer_viewport* b);
+
+		// extern gvr_buffer_viewport_list * gvr_buffer_viewport_list_create (const gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_buffer_viewport_list* gvr_buffer_viewport_list_create (gvr_context* gvr);
+
+		// extern void gvr_buffer_viewport_list_destroy (gvr_buffer_viewport_list **viewport_list);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_list_destroy (gvr_buffer_viewport_list** viewport_list);
+
+		// extern size_t gvr_buffer_viewport_list_get_size (const gvr_buffer_viewport_list *viewport_list);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe nuint gvr_buffer_viewport_list_get_size (gvr_buffer_viewport_list* viewport_list);
+
+		// extern void gvr_buffer_viewport_list_get_item (const gvr_buffer_viewport_list *viewport_list, size_t index, gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_list_get_item (gvr_buffer_viewport_list* viewport_list, nuint index, gvr_buffer_viewport* viewport);
+
+		// extern void gvr_buffer_viewport_list_set_item (gvr_buffer_viewport_list *viewport_list, size_t index, const gvr_buffer_viewport *viewport);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_viewport_list_set_item (gvr_buffer_viewport_list* viewport_list, nuint index, gvr_buffer_viewport* viewport);
+
+		// extern gvr_buffer_spec * gvr_buffer_spec_create (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_buffer_spec* gvr_buffer_spec_create (gvr_context* gvr);
+
+		// extern void gvr_buffer_spec_destroy (gvr_buffer_spec **spec);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_spec_destroy (gvr_buffer_spec** spec);
+
+		// extern gvr_sizei gvr_buffer_spec_get_size (const gvr_buffer_spec *spec);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_sizei gvr_buffer_spec_get_size (gvr_buffer_spec* spec);
+
+		// extern void gvr_buffer_spec_set_size (gvr_buffer_spec *spec, gvr_sizei size);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_spec_set_size (gvr_buffer_spec* spec, gvr_sizei size);
+
+		// extern int32_t gvr_buffer_spec_get_samples (const gvr_buffer_spec *spec);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_buffer_spec_get_samples (gvr_buffer_spec* spec);
+
+		// extern void gvr_buffer_spec_set_samples (gvr_buffer_spec *spec, int32_t num_samples);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_spec_set_samples (gvr_buffer_spec* spec, int num_samples);
+
+		// extern void gvr_buffer_spec_set_color_format (gvr_buffer_spec *spec, int32_t color_format);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_spec_set_color_format (gvr_buffer_spec* spec, int color_format);
+
+		// extern void gvr_buffer_spec_set_depth_stencil_format (gvr_buffer_spec *spec, int32_t depth_stencil_format);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_spec_set_depth_stencil_format (gvr_buffer_spec* spec, int depth_stencil_format);
+
+		// extern void gvr_buffer_spec_set_multiview_layers (gvr_buffer_spec *spec, int32_t num_layers);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_buffer_spec_set_multiview_layers (gvr_buffer_spec* spec, int num_layers);
+
+		// extern gvr_swap_chain * gvr_swap_chain_create (gvr_context *gvr, const gvr_buffer_spec **buffers, int32_t count);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_swap_chain* gvr_swap_chain_create (gvr_context* gvr, gvr_buffer_spec** buffers, int count);
+
+		// extern void gvr_swap_chain_destroy (gvr_swap_chain **swap_chain);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_swap_chain_destroy (gvr_swap_chain** swap_chain);
+
+		// extern int32_t gvr_swap_chain_get_buffer_count (const gvr_swap_chain *swap_chain);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_swap_chain_get_buffer_count (gvr_swap_chain* swap_chain);
+
+		// extern gvr_sizei gvr_swap_chain_get_buffer_size (const gvr_swap_chain *swap_chain, int32_t index);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_sizei gvr_swap_chain_get_buffer_size (gvr_swap_chain* swap_chain, int index);
+
+		// extern void gvr_swap_chain_resize_buffer (gvr_swap_chain *swap_chain, int32_t index, gvr_sizei size);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_swap_chain_resize_buffer (gvr_swap_chain* swap_chain, int index, gvr_sizei size);
+
+		// extern gvr_frame * gvr_swap_chain_acquire_frame (gvr_swap_chain *swap_chain);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_frame* gvr_swap_chain_acquire_frame (gvr_swap_chain* swap_chain);
+
+		// extern void gvr_frame_bind_buffer (gvr_frame *frame, int32_t index);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_frame_bind_buffer (gvr_frame* frame, int index);
+
+		// extern void gvr_frame_unbind (gvr_frame *frame);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_frame_unbind (gvr_frame* frame);
+
+		// extern gvr_sizei gvr_frame_get_buffer_size (const gvr_frame *frame, int32_t index);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_sizei gvr_frame_get_buffer_size (gvr_frame* frame, int index);
+
+		// extern int32_t gvr_frame_get_framebuffer_object (const gvr_frame *frame, int32_t index);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_frame_get_framebuffer_object (gvr_frame* frame, int index);
+
+		// extern AHardwareBuffer * gvr_frame_get_hardware_buffer (const gvr_frame *frame, int32_t index);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe AHardwareBuffer* gvr_frame_get_hardware_buffer (gvr_frame* frame, int index);
+
+		// extern void gvr_frame_submit (gvr_frame **frame, const gvr_buffer_viewport_list *list, gvr_mat4f head_space_from_start_space);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_frame_submit (gvr_frame** frame, gvr_buffer_viewport_list* list, gvr_mat4f head_space_from_start_space);
+
+		// extern void gvr_bind_default_framebuffer (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_bind_default_framebuffer (gvr_context* gvr);
+
+		// extern gvr_clock_time_point gvr_get_time_point_now ();
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern gvr_clock_time_point gvr_get_time_point_now ();
+
+		// extern gvr_mat4f gvr_get_head_space_from_start_space_rotation (const gvr_context *gvr, const gvr_clock_time_point time);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_mat4f gvr_get_head_space_from_start_space_rotation (gvr_context* gvr, gvr_clock_time_point time);
+
+		// extern gvr_mat4f gvr_get_head_space_from_start_space_transform (const gvr_context *gvr, const gvr_clock_time_point time);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_mat4f gvr_get_head_space_from_start_space_transform (gvr_context* gvr, gvr_clock_time_point time);
+
+		// extern gvr_mat4f gvr_apply_neck_model (const gvr_context *gvr, gvr_mat4f head_space_from_start_space_rotation, float factor);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_mat4f gvr_apply_neck_model (gvr_context* gvr, gvr_mat4f head_space_from_start_space_rotation, float factor);
+
+		// extern void gvr_pause_tracking (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_pause_tracking (gvr_context* gvr);
+
+		// extern void gvr_resume_tracking (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_resume_tracking (gvr_context* gvr);
+
+		// extern void gvr_reset_tracking (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_reset_tracking (gvr_context* gvr);
+
+		// extern void gvr_recenter_tracking (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_recenter_tracking (gvr_context* gvr);
+
+		// extern _Bool gvr_set_default_viewer_profile (gvr_context *gvr, const char *viewer_profile_uri);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe bool gvr_set_default_viewer_profile (gvr_context* gvr, sbyte* viewer_profile_uri);
+
+		// extern void gvr_refresh_viewer_profile (gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_refresh_viewer_profile (gvr_context* gvr);
+
+		// extern const char * gvr_get_viewer_vendor (const gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe sbyte* gvr_get_viewer_vendor (gvr_context* gvr);
+
+		// extern const char * gvr_get_viewer_model (const gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe sbyte* gvr_get_viewer_model (gvr_context* gvr);
+
+		// extern int32_t gvr_get_viewer_type (const gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe int gvr_get_viewer_type (gvr_context* gvr);
+
+		// extern gvr_mat4f gvr_get_eye_from_head_matrix (const gvr_context *gvr, const int32_t eye);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_mat4f gvr_get_eye_from_head_matrix (gvr_context* gvr, int eye);
+
+		// extern gvr_recti gvr_get_window_bounds (const gvr_context *gvr);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe gvr_recti gvr_get_window_bounds (gvr_context* gvr);
+
+		// extern void gvr_compute_distorted_point (const gvr_context *gvr, const int32_t eye, const gvr_vec2f uv_in, gvr_vec2f *uv_out);
+		[DllImport ("libGVRSDK.a")]
+		//[Verify (PlatformInvoke)]
+		static extern unsafe void gvr_compute_distorted_point (gvr_context* gvr, int eye, gvr_vec2f uv_in, gvr_vec2f[] uv_out);
+	}
 
 	//[Verify (InferredFromMemberPrefix)]
 	public enum GvrSdk : uint
