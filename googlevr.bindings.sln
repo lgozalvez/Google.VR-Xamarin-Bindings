@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "googlevr.bindings.ios", "go
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.VR.GVRKit.iOS", "Google.VR.GVRKit.iOS\Google.VR.GVRKit.iOS.csproj", "{900F654C-96E2-4672-8D73-EB7BE7CDF298}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoPlayer360", "VideoPlayer360\VideoPlayer360.csproj", "{352B1F16-6423-4BF7-8261-0A679A4C03AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{900F654C-96E2-4672-8D73-EB7BE7CDF298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{900F654C-96E2-4672-8D73-EB7BE7CDF298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{900F654C-96E2-4672-8D73-EB7BE7CDF298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352B1F16-6423-4BF7-8261-0A679A4C03AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352B1F16-6423-4BF7-8261-0A679A4C03AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352B1F16-6423-4BF7-8261-0A679A4C03AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352B1F16-6423-4BF7-8261-0A679A4C03AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

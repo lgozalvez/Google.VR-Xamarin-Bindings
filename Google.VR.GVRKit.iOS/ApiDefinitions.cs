@@ -355,7 +355,7 @@ namespace GVRKit
 	{
 		// -(instancetype)initWithRenderer:(GVRRenderer *)renderer;
 		[Export ("initWithRenderer:")]
-		IntPtr Constructor (GVRRenderer renderer);
+		IntPtr Constructor (NSObject renderer);
 
         // @property (readonly, nonatomic) GVRRenderer * renderer;
         [Export ("renderer")]
@@ -438,7 +438,7 @@ namespace GVRKit
 
 	// @interface GVRVideoRenderer : GVRTextureRenderer
 	[BaseType (typeof(GVRTextureRenderer))]
-	interface GVRVideoRenderer
+	interface GVRVideoRenderer : GVRTextureRenderer
 	{
 		// @property (nonatomic) AVPlayer * player;
 		[Export ("player", ArgumentSemantic.Assign)]
